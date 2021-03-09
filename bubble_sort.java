@@ -6,7 +6,7 @@ public class bubble_sort {
         JFrame window = new JFrame("Selection Sort");
         JTextArea textArea = new JTextArea();
         Font newfont = new Font("Tamaho",Font.BOLD,16);
-        int array[] = {2,6,4,8,10,12,89,68,45,37};
+        int array[] = {6,4,8,10,12,89,68,45,37};
         String output;
 
         output = "Data items in original order\n";
