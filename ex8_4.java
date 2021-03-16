@@ -16,7 +16,7 @@ public class ex8_4 {
         c.add(textArea1, BorderLayout.WEST);
         textArea2 = new JTextArea(6,14);
         textArea2.setText("This Center");
-        scroll = new JScrollPane(textArea2);
+        scroll = new JScrollPane(textArea2);  //add textarea2 ไปที่  scroll และไปที่  container
         c.add(scroll, BorderLayout.CENTER);
         textArea3 = new JTextArea(6,14);
         textArea3.setEditable(false);   //ทำให้เข้าไปแก้ไขข้อความภายในได้
