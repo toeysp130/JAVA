@@ -41,20 +41,28 @@ public void actionPerformed( ActionEvent event )
 {
     double salary = Double.parseDouble(salaryField.getText()) ;
     if (event.getSource() == btnCalculate) {
-        double tax, netSalary, taxRate;
+        double  netSalary;
+        netSalary =  getTax(salary);
+        resultField.setText( Double.toString( netSalary ) );
+        
+    }else if (event.getSource() == btnExit) {
+        System.exit(0);
+    }
+} // end method actionPerformed
+
+public double getTax(double salary){
+    double tax, taxRate;
         if (salary < 20000) taxRate = 0.02;
         else if (salary < 50000) taxRate = 0.05;
         else if (salary < 100000) taxRate = 0.07;
         else if (salary < 500000) taxRate = 0.10;
         else taxRate = 0.15;
         tax = salary * taxRate;
-        netSalary = salary - tax;
         taxField.setText(Double.toString( tax) ) ;
-        resultField.setText( Double.toString( netSalary ) );
-    }else if (event.getSource() == btnExit) {
-        System.exit(0);
-    }
-} // end method actionPerformed
+        return salary - tax;
+        
+    
+}
         public static void main(String[] args) {
             ex7_2 gui = new ex7_2();
         }
