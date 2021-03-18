@@ -19,28 +19,33 @@ public class ex7_3 implements ActionListener {
         //numberField.setEditable( false );
         container.add( numberField );
         btn_mod = new JButton("%");
+        btn_mod.setPreferredSize(new Dimension(50, 50));
         btn_mod.addActionListener( this);
         container.add(btn_mod);
 
         btn_ce = new JButton("CE");
         btn_ce.addActionListener( this);
+        btn_ce.setPreferredSize(new Dimension(50, 50));
         container.add(btn_ce);
 
         btn_c = new JButton("C");
         btn_c.addActionListener( this);
+        btn_c.setPreferredSize(new Dimension(50, 50));
         container.add(btn_c);
 
-        btn_backspace = new JButton("<--");
+        btn_backspace = new JButton("<-");
         btn_backspace.addActionListener( this);
+        btn_backspace.setPreferredSize(new Dimension(50, 50));
         container.add(btn_backspace);
 
-        
+
 
         //for นี้สร้างเลข
         for(int i = 0 ; i < 10 ;i++){
             String name =String.valueOf(i); 
             btn[i] = new JButton(name);
             btn[i].addActionListener( this);
+            btn[i].setPreferredSize(new Dimension(50, 50));
             container.add( btn[i] );
         }
         //จบ for สร้างเลข
