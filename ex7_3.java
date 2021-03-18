@@ -5,7 +5,7 @@ public class ex7_3 implements ActionListener {
     JLabel numberLabel;
     JTextField numberField;
     JButton[] btn = new JButton[10] ;
-    JButton btn_mod , btn_ce , btn_c , btn_backspace , btn_1x , btn_x2 , btn_root , btn_div;
+    JButton btn_mod , btn_ce , btn_c , btn_backspace , btn_1x , btn_x2 , btn_root , btn_div , btn_mul , btn_nag , btn_pls;
     JFrame window;
     public ex7_3() {
         // obtain content pane and set its layout to FlowLayout
@@ -38,29 +38,30 @@ public class ex7_3 implements ActionListener {
         btn_backspace.setPreferredSize(new Dimension(50, 50));
         container.add(btn_backspace);
 
-        btn_backspace = new JButton("<-");
-        btn_backspace.addActionListener( this);
-        btn_backspace.setPreferredSize(new Dimension(50, 50));
-        container.add(btn_backspace);
-        
-        btn_1x = new JButton("%");
+    
+        btn_1x = new JButton("1/x");
         btn_1x.setPreferredSize(new Dimension(50, 50));
         btn_1x.addActionListener( this);
         container.add(btn_1x);
         
-        btn_x2 = new JButton("%");
+        btn_x2 = new JButton("x2");
         btn_x2.setPreferredSize(new Dimension(50, 50));
         btn_x2.addActionListener( this);
         container.add(btn_x2);
 
-        btn_x2 = new JButton("%");
-        btn_x2.setPreferredSize(new Dimension(50, 50));
-        btn_x2.addActionListener( this);
-        container.add(btn_x2);
+        btn_root = new JButton("2root|X");
+        btn_root.setPreferredSize(new Dimension(50, 50));
+        btn_root.addActionListener( this);
+        container.add(btn_root);
+
+        btn_div = new JButton("/");
+        btn_div.setPreferredSize(new Dimension(50, 50));
+        btn_div.addActionListener( this);
+        container.add(btn_div);
 
 
         //for นี้สร้างเลข
-        for(int i = 0 ; i < 10 ;i++){
+        for(int i = 7 ; i <= 9 ;i++){
             String name =String.valueOf(i); 
             btn[i] = new JButton(name);
             btn[i].addActionListener( this);
@@ -68,6 +69,10 @@ public class ex7_3 implements ActionListener {
             container.add( btn[i] );
         }
         //จบ for สร้างเลข
+        btn_div = new JButton("/");
+        btn_div.setPreferredSize(new Dimension(50, 50));
+        btn_div.addActionListener( this);
+        container.add(btn_div);
 
         
         
