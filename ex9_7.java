@@ -6,7 +6,7 @@ public class ex9_7 extends JFrame implements ActionListener{
     private JLabel strLabel,xLabel,yLabel;
     private JTextField strField,xField,yField;
     private Font myFont = new Font("Arial",Font.BOLD,14);
-    String mesg;
+    String mesg = " ";
     int x,y;
     public ex9_7(){
         super("DrawgraphicbyActionListener");
